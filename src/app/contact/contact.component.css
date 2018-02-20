@@ -1,0 +1,40 @@
+.welcomeContact {
+    margin-top: 1%;
+    margin-left: 1%; 
+}
+
+.email {
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+.phone {
+    margin-left: 2%;
+    margin-top: .5%;
+
+}
+
+.lineToSeperateForm {
+    width: 70%;
+    opacity: 100%; 
+}
+
+.emailForm {
+    margin-left: 5%;
+}
+
+.staticMessage {
+    text-align: center;
+}
+
+#userEmail {
+    margin-left: 15%;
+}
+
+#userMessage {
+    margin-left: 7%;
+}
+
+body {
+    color: red;
+}

@@ -1,0 +1,30 @@
+#jonathanImg {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 4%;
+}
+
+.greeting {
+    text-align: center;
+    margin-top: 1%;
+}
+
+.line1 {
+    width: 35%;
+    border-width: 2px;
+    
+}
+
+.messagePhilosophy {
+    text-align: center;
+}
+
+.line2 {
+    width: 70%;
+    border-width: 2px;
+}
+
+.blog {
+    margin-top: 1%;
+    margin-left:1%;
+}
