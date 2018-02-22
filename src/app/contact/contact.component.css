@@ -19,22 +19,24 @@
     opacity: 100%; 
 }
 
-.emailForm {
-    margin-left: 5%;
-}
 
 .staticMessage {
     text-align: center;
 }
 
 #userEmail {
-    margin-left: 15%;
+    margin: auto;
+}
+
+#userLastname {
+    margin-left: 14%;
 }
 
 #userMessage {
     margin-left: 7%;
 }
 
-body {
-    color: red;
+#submitButton {
+    margin: auto;
+    margin-left: 45%;
 }

@@ -5,8 +5,10 @@
 
 .SeperatingBio {
     width: 70%;
-    
-  
+}
+
+.work {
+    margin:auto;
 }
 
 .MyWork {
@@ -19,14 +21,45 @@
     margin:auto;
 }
 
-.githubLogo {
+/* .githubLogo {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 20%;
+    transition: transform .2s;
 }
+
+.githubLogo.hover {
+    transform: scale(1.5);
+} */
 
 .WorkLine {
     width: 70%;
     margin-right: 30%;
 }
+
+.zoom {
+    transition: transform .2s; /* Animation */
+    width: 10%;
+    height: 10%;
+    margin-left: 45%;
+    
+}
+
+.zoom:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+/* body {
+    background:url(../../assets/background-gradient.jpeg) no-repeat !important;
+    padding-top:100px;
+    background-size:cover;
+  }
+  
+  .navbar, #first-jumbo  {
+    background: transparent !important;
+  }
+  
+  #first-jumbo {
+    text-align:center;
+  } */

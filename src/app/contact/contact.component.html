@@ -5,20 +5,31 @@
 <p class="staticMessage">Any questions? Feel free to send me a message below.</p>
 
 <hr class="lineToSeperateForm">
+<button (click)="addContact()"></button>
 
-<form>
+
+
+<form #contactForm="ngForm">
   <div class="row">
     <div class="col">
-      <input type="text" id="userEmail"  class="form-control col-10" placeholder="Your Email">
+      <input [(ngModel)]="newForm.lastName" required name="lastName" #lastname="ngModel" type="text" id="userLastname"  class="form-control col-10" placeholder="Your Last Name">
     </div>
     <div class="col">
-      <input id="userName" type="text" class="form-control col-10" placeholder="Your Full Name">
+      <input [(ngModel)]="newForm.firstName" required name="firstName" #firstname="ngModel" id="userName" type="text" class="form-control col-10" placeholder="Your First Name">
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col">
+      <input [(ngModel)]="newForm.email" required name="email" #email="ngModel" type="text" id="userEmail"  class="form-control col-8" placeholder="Your Email">
     </div>
   </div>
 <br>
   <div id="userMessage" class="form-group">
       <label for="exampleFormControlTextarea1"></label>
-      <textarea class="form-control col-11" id="exampleFormControlTextarea1" rows="15" placeholder="Your Message"></textarea>
-    </div>
+      <textarea [(ngModel)]="newForm.content" required name="content" #content="ngModel" class="form-control col-11" id="exampleFormControlTextarea1" rows="15" placeholder="Your Message"></textarea>
+    </div>    
 </form>
+
+<button type="submit" [disabled]="!contactForm.form.valid" id="submitButton" class="btn btn-primary" (click)="addContact()">Send message</button>
 
