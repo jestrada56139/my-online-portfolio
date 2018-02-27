@@ -1,5 +1,5 @@
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary sticky-top " style="background-color: #e3f2fd;">
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div [ngClass]="{ 'show': navbar }"  class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" style="color:aliceblue" href="#" routerLink="">Home
@@ -16,7 +16,11 @@
     </ul>
     
   </div>
+  <div (click)="showNavBar()">
+  <i  class="burger fas fa-bars"></i>
+</div>
 </nav>
+
 
 
 <router-outlet></router-outlet>

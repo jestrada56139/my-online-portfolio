@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+navbar = false;
+
+  showNavBar() {
+    if (this.navbar === true) {
+      this.navbar = false;
+    } else if (this.navbar === false) {
+      this.navbar = true;
+    }
+
+    console.log('showing nav bar');
+  }
+
 }
