@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule} from '@angular/forms';
+import { BlogComponent } from './blog/blog.component';
 
 
 
@@ -17,7 +18,8 @@ import { FormsModule} from '@angular/forms';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

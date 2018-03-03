@@ -15,8 +15,12 @@
  @media (max-width: 768px) { 
     .navbar {
         
-        background-color: green !important;
+        background-color:rgb(47, 152, 245) !important;
     }
+ }
+
+ body {
+     background-color: grey !important;
  }
 
 
