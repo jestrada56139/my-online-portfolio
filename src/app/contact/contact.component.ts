@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForm, NgModel } from '@angular/forms';
 
+
 class NewForm {
-  sealName: string;
   firstName: string;
-  email: string;
   lastName: string;
+  email: string;
   content: string;
 }
 
@@ -20,21 +20,21 @@ export class ContactComponent implements OnInit {
 
   constructor(private http: HttpClient) {
     this.newForm = new NewForm();
-    this.newForm.sealName = 'Jonathan Estrada';
   }
 
 
   addContact() {
     console.log(this.newForm);
-    // this.http.post('https://seals-server.herokuapp.com' + '/contact-seals', this.newForm)
-    // .subscribe(
-    //   result => {
-    //     console.log(result);
-    //   },
-    //   err => {
-    //     console.log('Error- something is wrong!');
-    //   });
+    this.http.post('http://localhost:3000' + '/contactFormSubmit', this.newForm)
+    .subscribe(
+      result => {
+        console.log(result);
+      },
+      err => {
+        console.log(err);
+      });
   }
+
 
 
 

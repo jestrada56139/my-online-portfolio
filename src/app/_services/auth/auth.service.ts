@@ -16,4 +16,10 @@ export class AuthService {
     const endPoint = baseUrl + '/admin/login';
     return this.http.post(endPoint, payload);
   }
+
+  contact(payload) {
+    const endPoint = baseUrl + '/contactFormSubmit';
+    return this.http.post(endPoint, payload);
+  }
 }
+
