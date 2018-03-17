@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule} from '@angular/forms';
 import { BlogComponent } from './blog/blog.component';
+import { AdminComponent } from './admin/admin.component';
+import { AuthService} from './_services/auth/auth.service';
 
 
 
@@ -19,7 +21,8 @@ import { BlogComponent } from './blog/blog.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    BlogComponent
+    BlogComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,9 @@ import { BlogComponent } from './blog/blog.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

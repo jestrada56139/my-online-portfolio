@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../_services/auth/auth.service';
+
 
 @Component({
   selector: 'app-home',
@@ -13,8 +15,11 @@ export class HomeComponent implements OnInit {
 
 
   getContacts() {
-    this.http.get('http://localhost:3000/api/contacts').subscribe(response => console.log(response));
+    console.log('useless');
+    // this.http.get('http://localhost:3000/api/contacts').subscribe(response => console.log(response));
   }
+
+
 
 
   ngOnInit() {
