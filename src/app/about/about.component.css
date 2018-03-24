@@ -12,7 +12,7 @@
 }
 
 .MyWork {
-    margin-top: 20%;
+    margin-top: 10%;
     margin-left: 1%;
 }
 
@@ -40,8 +40,8 @@
 
 .zoom {
     transition: transform .2s; /* Animation */
-    width: 10%;
-    height: 10%;
+    width: 5%;
+    height: 5%;
     margin-left: 45%;
     
 }

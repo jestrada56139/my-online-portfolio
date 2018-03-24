@@ -6,11 +6,12 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/catch';
 import { baseUrl } from '../httpBaseUrl/httpBaseUrl';
+// import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable()
 export class AuthService {
 
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient, ) { }
 
   login(payload) {
     const endPoint = baseUrl + '/admin/login';
@@ -21,5 +22,13 @@ export class AuthService {
     const endPoint = baseUrl + '/contactFormSubmit';
     return this.http.post(endPoint, payload);
   }
+
+  // public isAuthenticated(): boolean {
+  //   const token = localStorage.getItem('token');
+  //   // Check whether the token is expired and return
+  //   // true or false
+  //   return !this.jwtHelper.isTokenExpired(token);
+  // }
+
 }
 

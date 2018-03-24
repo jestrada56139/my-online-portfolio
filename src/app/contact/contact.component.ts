@@ -29,6 +29,8 @@ export class ContactComponent implements OnInit {
     .subscribe(
       result => {
         console.log(result);
+        this.newForm = new NewForm;
+        alert('Message Sent!')
       },
       err => {
         console.log(err);

@@ -1,6 +1,114 @@
-<h1>
-  Blog
-</h1>
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-lg-8">
+
+      <h1 class="mt-4">Hi! Welcome to my Blog!</h1>
+
+      <p class="lead">
+        by
+        <a href="#">Jonathan Estrada</a>
+      </p>
+
+      <hr>
+
+      <p>Posted on March 21, 2018 at 12:00 PM</p>
+
+      <hr>
+
+      <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+
+      <hr>
+
+      <H4>Learning to Make Decisions</H4>
+      <p class="lead"> During a meet, I was taught how to handle tough decisions. Although much stress leads to overthinking, the first step was to understand your victorys. Looking back on that shows you how much you've gone through and how little this decision is compared to those.</p>
+
+      <p class="lead"> </p>
+      
+      <p class="lead">Next was to look back on your core values. </p>
+
+      <!-- <blockquote class="blockquote">
+        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <footer class="blockquote-footer">Someone famous in
+          <cite title="Source Title">Source Title</cite>
+        </footer>
+      </blockquote> -->
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
+
+      <hr>
+
+
+      <!-- <div class="card my-4">
+        <h5 class="card-header">Leave a Comment:</h5>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div> -->
+
+      <form #contactForm="ngForm">
+          <div class="row">
+            <div class="col">
+              <input [(ngModel)]="newForm.name" required name="name" #name="ngModel" type="text" id="name"  class="form-control col-10" placeholder="Your Full Name">
+            </div>
+          </div>
+          <div id="userMessage" class="form-group">
+              <label for="exampleFormControlTextarea1"></label>
+              <textarea [(ngModel)]="newForm.content" required name="content" #content="ngModel" class="form-control col-11" id="exampleFormControlTextarea1" rows="3" placeholder="Your Comment"></textarea>
+            </div>    
+        </form>
+        
+        <button type="submit" [disabled]="!contactForm.form.valid" id="submitButton" class="btn btn-primary" (click)="addComment()">Send message</button>
+        
+
+      <!-- Single Comment -->
+      <div  class="media mb-4">
+        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+        <div *ngFor = "let comment of comments" class="media-body">
+          <h5 class="mt-0">{{comment.name}}</h5>
+          {{comment.content}}    
+          </div>
+      </div>
+
+      <!-- Comment with nested comments -->
+      <div class="media mb-4">
+        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+        <div class="media-body">
+          <h5 class="mt-0">Commenter Name</h5>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+          <div class="media mt-4">
+            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+            <div class="media-body">
+              <h5 class="mt-0">Commenter Name</h5>
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            </div>
+          </div>
+
+          <div class="media mt-4">
+            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+            <div class="media-body">
+              <h5 class="mt-0">Commenter Name</h5>
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+</div>
+<!-- /.container -->
 
 
 <div class="container">
@@ -28,3 +136,21 @@
   </div>
 
 </div>
+
+<div *ngFor = "let comment of comments">
+  <p>Name:{{comment.name}}. Comment:{{comment.content}}</p>
+</div>
+
+<form #contactForm="ngForm">
+  <div class="row">
+    <div class="col">
+      <input [(ngModel)]="newForm.name" required name="name" #name="ngModel" type="text" id="name"  class="form-control col-10" placeholder="Your Full Name">
+    </div>
+  </div>
+  <div id="userMessage" class="form-group">
+      <label for="exampleFormControlTextarea1"></label>
+      <textarea [(ngModel)]="newForm.content" required name="content" #content="ngModel" class="form-control col-11" id="exampleFormControlTextarea1" rows="3" placeholder="Your Comment"></textarea>
+    </div>    
+</form>
+
+<button type="submit" [disabled]="!contactForm.form.valid" id="submitButton" class="btn btn-primary" (click)="addComment()">Send message</button>

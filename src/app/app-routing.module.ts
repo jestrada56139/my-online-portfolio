@@ -5,28 +5,33 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { BlogComponent } from './blog/blog.component';
 import { AdminComponent } from './admin/admin.component';
+// import { AuthGuardService as AuthGuard } from '../app/_services/auth/auth-guard.service';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    // canActivate: [AuthGuard]
   },
 
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    // canActivate: [AuthGuard]
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent,
+    // canActivate: [AuthGuard]
   },
   {
     path: 'blog',
-    component: BlogComponent
+    component: BlogComponent,
+    // canActivate: [AuthGuard]
   },
   {
     path: 'admin/login',
-    component: AdminComponent
+    component: AdminComponent,
   },
   {
     path: '**',
